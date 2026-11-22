@@ -116,6 +116,10 @@ h1 .by { margin-top: 16px; font-size: clamp(1.25rem, 1rem + .8vw, 1.625rem); fon
 .win-h { left: 50%; top: 0; width: 50%; rotate: 2.5deg; z-index: 2; }
 .win-g { left: 35%; top: 42%; width: 65%; rotate: -1deg; z-index: 3; }
 @media (hover: hover) { .win:hover { translate: 0 -6px; } }
+.seal { position: absolute; z-index: 4; left: 1%; bottom: 3%; width: 31%; rotate: -12deg; pointer-events: none; filter: drop-shadow(0 2px 3px rgba(4, 10, 32, .34)) drop-shadow(0 14px 22px rgba(4, 10, 32, .34)); }
+.seal svg { width: 100%; height: auto; overflow: visible; }
+.seal text { font-family: var(--font); font-weight: 800; }
+@keyframes seal-in { from { opacity: 0; scale: 1.5; rotate: -26deg; } }
 
 .demos { padding: 96px 0; }
 .head { max-width: 720px; }
@@ -179,6 +183,7 @@ h3 { color: var(--ink); font-size: 1.375rem; font-weight: 800; line-height: 1.2;
 @media (max-width: 1023px) {
   .hero-in { grid-template-columns: minmax(0, 1fr); row-gap: 48px; padding-top: 48px; padding-bottom: 64px; }
   .stack { max-width: 720px; }
+  .seal { left: 4%; }
   .demos, .band, .cta { padding: 64px 0; }
   .grid { grid-template-columns: minmax(0, 1fr); }
   .grid { gap: 16px; }
@@ -207,6 +212,8 @@ h3 { color: var(--ink); font-size: 1.375rem; font-weight: 800; line-height: 1.2;
   .win-b { left: 0; top: 0; width: 60%; }
   .win-h { left: 41%; top: 9%; width: 57%; }
   .win-g { left: 10%; top: 39%; width: 90%; }
+  .stack { margin-bottom: 48px; }
+  .seal { left: 5%; bottom: -22%; width: 42%; }
   .demos, .band, .cta { padding: 48px 0; }
   .grid { margin-top: 32px; }
   .demo { flex-direction: column; align-items: stretch; padding: 0; }
@@ -223,6 +230,7 @@ h3 { color: var(--ink); font-size: 1.375rem; font-weight: 800; line-height: 1.2;
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
+  .seal { animation: seal-in .42s cubic-bezier(.2, 1.3, .4, 1) .45s backwards; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -279,6 +287,25 @@ h3 { color: var(--ink); font-size: 1.375rem; font-weight: 800; line-height: 1.2;
         <a class="win win-b" href="bold/"><span class="bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="previews/bold.jpg" width="960" height="600" alt="Northlight Church demo site, the bold and modern design" decoding="async"></a>
         <a class="win win-h" href="heritage/"><span class="bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="previews/heritage.jpg" width="960" height="600" alt="St. Andrew's Fellowship demo site, the traditional and reverent design" decoding="async"></a>
         <a class="win win-g" href="grace/"><span class="bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="previews/grace.jpg" width="960" height="600" alt="Grace Harbor Church demo site, the warm and welcoming design" fetchpriority="high" decoding="async"></a>
+        <div class="seal" role="img" aria-label="Free guarantee. One More Company.">
+          <svg viewBox="0 0 260 260" aria-hidden="true">
+            <defs>
+              <path id="seal-top" d="M38 130a92 92 0 0 1 184 0"/>
+              <path id="seal-bot" d="M25 130a105 105 0 0 0 210 0"/>
+            </defs>
+            <circle cx="130" cy="130" r="118" fill="none" stroke="#F6C744" stroke-width="16" stroke-linecap="round" stroke-dasharray="0 18.535"/>
+            <circle cx="130" cy="130" r="118" fill="#F6C744"/>
+            <circle cx="130" cy="130" r="111" fill="none" stroke="#0B1D47" stroke-width="3"/>
+            <circle cx="130" cy="130" r="85" fill="none" stroke="#0B1D47" stroke-width="2"/>
+            <text fill="#0B1D47" font-size="18" text-anchor="middle"><textPath href="#seal-top" startOffset="50%" textLength="226" lengthAdjust="spacing">ONE MORE COMPANY</textPath></text>
+            <text fill="#0B1D47" font-size="15" text-anchor="middle"><textPath href="#seal-bot" startOffset="50%" textLength="176" lengthAdjust="spacing">CHURCH WEBSITES</textPath></text>
+            <use href="#omc-mark" x="103" y="57" width="54" height="54"/>
+            <text x="130" y="194" fill="#0B1D47" font-size="17" text-anchor="middle" letter-spacing="4">★★★★★</text>
+            <path d="M-30 119h320l-15 23 15 23H-30l15-23z" fill="#D7261E"/>
+            <path d="M-12 124.5h284M-12 159.5h284" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.25" stroke-dasharray="5 4"/>
+            <text x="130" y="152" fill="#fff" font-size="28" text-anchor="middle" textLength="244" lengthAdjust="spacing">FREE GUARANTEE</text>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
