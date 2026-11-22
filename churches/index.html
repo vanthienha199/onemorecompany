@@ -5,158 +5,328 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Church Websites by One More Company</title>
 <meta name="description" content="Three church website designs you can click through: warm, bold and traditional. Service times on the first screen, Plan a Visit, sermons, events, prayer and Tithely giving built in.">
-<meta name="theme-color" content="#ffffff">
-<link rel="icon" href="../favicon.png">
+<link rel="canonical" href="https://onemorecompany.net/churches/">
+<meta name="theme-color" content="#0F2557">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="One More Company">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://onemorecompany.net/churches/">
+<meta property="og:title" content="Church Websites by One More Company">
+<meta property="og:description" content="Three church website designs you can click through: warm, bold and traditional. Service times on the first screen, Plan a Visit, sermons, events, prayer and Tithely giving built in.">
+<meta property="og:image" content="https://onemorecompany.net/churches/social-preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Church websites by One More Company. Three demo church sites shown in browser windows.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Church Websites by One More Company">
+<meta name="twitter:description" content="Three church website designs you can click through: warm, bold and traditional. Service times on the first screen, Plan a Visit, sermons, events, prayer and Tithely giving built in.">
+<meta name="twitter:image" content="https://onemorecompany.net/churches/social-preview.jpg">
+<meta name="twitter:image:alt" content="Church websites by One More Company. Three demo church sites shown in browser windows.">
+<link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face { font-family: "Plus Jakarta Sans"; src: url("fonts/plus-jakarta-sans-latin.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jakarta Fallback"; src: local("Arial"), local("ArialMT"); font-weight: 200 600; size-adjust: 105.5%; ascent-override: 98.4%; descent-override: 21%; line-gap-override: 0%; }
+@font-face { font-family: "Jakarta Fallback"; src: local("Arial Bold"), local("Arial-BoldMT"); font-weight: 700 800; size-adjust: 100.6%; ascent-override: 103.2%; descent-override: 22.1%; line-gap-override: 0%; }
 :root {
-  --bg: #ffffff; --soft: #f4f5f7; --line: #e3e5e8; --ink: #111418; --text: #2b2f36; --muted: #5b616b;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --brand-midnight: #0F2557;
+  --brand-deep: #0B1D47;
+  --brand-blue: #1D4ED8;
+  --brand-gold: #F6C744;
+  --surface: #ffffff;
+  --surface-soft: #F2F5FC;
+  --line: #DAE1F0;
+  --ink: #0B1736;
+  --text: #28324F;
+  --muted: #4C5774;
+  --on-brand: #ffffff;
+  --on-brand-soft: #DCE4F5;
+  --on-brand-muted: #A9B8DC;
+  --focus: #1D4ED8;
+  --font: "Plus Jakarta Sans", "Jakarta Fallback", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --ease: cubic-bezier(.2, .7, .3, 1);
+  --gutter: clamp(16px, 4vw, 32px);
+  --shadow-lift: 0 2px 6px rgba(11, 23, 54, .10), 0 20px 40px rgba(11, 23, 54, .16);
+  --shadow-win: 0 2px 6px rgba(4, 10, 32, .30), 0 24px 56px rgba(4, 10, 32, .42);
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+html { background: var(--brand-midnight); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--surface); color: var(--text); font: 500 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
-img { display: block; max-width: 100%; height: auto; }
-:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
-.wrap { max-width: 1160px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-left)); }
-header.top { border-bottom: 1px solid var(--line); }
-.top-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
-.name { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
-.top a.mail { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 8px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; }
-.top a.mail:hover { background: #2b2f36; }
-.intro { padding-top: 64px; padding-bottom: 40px; }
-.intro h1, .intro p { max-width: 760px; text-wrap: balance; }
-h1 { margin: 0 0 16px; color: var(--ink); font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.08; letter-spacing: -0.03em; font-weight: 750; }
-.intro p { margin: 0; color: var(--muted); font-size: 1.125rem; }
-.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-bottom: 64px; }
-.demo { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; transition: border-color .15s ease-out, box-shadow .15s ease-out; }
-.demo:hover { border-color: #c9cdd3; box-shadow: 0 6px 20px rgba(17,20,24,.08); }
-.shot { display: block; aspect-ratio: 16 / 10; background: var(--soft); border-bottom: 1px solid var(--line); }
-.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.body { display: flex; flex-direction: column; gap: 8px; padding: 20px 20px 22px; flex: 1; }
-.tag { margin: 0; font-size: 13px; font-weight: 600; color: var(--muted); }
-.body h2 { margin: 0; font-size: 1.35rem; line-height: 1.2; color: var(--ink); letter-spacing: -0.015em; }
-.body p.desc { margin: 0; color: var(--muted); font-size: 16px; }
-.open { margin-top: auto; padding-top: 12px; }
-.open a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid var(--ink); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px; transition: background-color .15s, color .15s; }
-.open a:hover { background: var(--ink); color: #fff; }
-.band { background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 56px 0; }
-.band-in { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
-.band h2 { margin: 0; font-size: 1.6rem; line-height: 1.2; color: var(--ink); letter-spacing: -0.02em; }
-.list { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; }
-.list li { padding-left: 26px; position: relative; }
-.list li::before { content: ""; position: absolute; left: 2px; top: .55em; width: 12px; height: 7px; border-left: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(-45deg); }
-.contact { padding: 56px 0 72px; }
-.contact h2 { margin: 0 0 8px; font-size: 1.6rem; color: var(--ink); letter-spacing: -0.02em; }
-.contact p { margin: 0 0 20px; color: var(--muted); max-width: 40em; }
-.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-.btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 8px; font: 600 16px var(--font); text-decoration: none; cursor: pointer; border: 1px solid var(--ink); }
-.btn-dark { background: var(--ink); color: #fff; }
-.btn-dark:hover { background: #2b2f36; }
-.btn-line { background: #fff; color: var(--ink); }
-.btn-line:hover { background: var(--soft); }
-footer { border-top: 1px solid var(--line); padding: 20px 0 28px; color: var(--muted); font-size: 14px; }
-@media (max-width: 960px) { .grid { grid-template-columns: 1fr 1fr; } .band-in { grid-template-columns: 1fr; gap: 20px; } }
-@media (max-width: 640px) {
-  .intro { padding-top: 40px; padding-bottom: 28px; }
-  .intro p { text-wrap: pretty; }
-  .grid { grid-template-columns: 1fr; gap: 16px; padding-bottom: 48px; }
-  .list { grid-template-columns: 1fr; }
-  .band, .contact { padding: 40px 0; }
-  .top a.mail { padding: 0 14px; }
-}
-/* ---- interaction layer (transform/opacity only) ---- */
-:root { --ease: cubic-bezier(.2, .7, .3, 1); }
-header.top { position: sticky; top: 0; z-index: 10; background: #fff; transition: box-shadow .25s var(--ease); }
-header.top.scrolled { box-shadow: 0 6px 20px rgba(17,20,24,.07); }
-.top a.mail, .btn, .open a { transition: background-color .15s, color .15s, transform .18s var(--ease), box-shadow .18s var(--ease); }
+img, svg { display: block; }
+img { max-width: 100%; height: auto; }
+h1, h2, h3, p, ul { margin: 0; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+[id] { scroll-margin-top: 104px; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(var(--gutter), env(safe-area-inset-left)); padding-right: max(var(--gutter), env(safe-area-inset-right)); }
+.on-brand { --focus: var(--brand-gold); color: var(--on-brand); }
+
+.brand { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; color: var(--on-brand); text-decoration: none; }
+.brand svg { flex: none; width: 44px; height: 44px; }
+.wm { display: block; font-size: 24px; font-weight: 800; line-height: 1; letter-spacing: -.02em; white-space: nowrap; }
+.wm small { display: block; margin-top: 4px; font-size: 11px; font-weight: 700; letter-spacing: .28em; color: var(--brand-gold); }
+
+.btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 24px; border: 0; border-radius: 12px; font: 700 16px/1.25 var(--font); letter-spacing: -.005em; text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform .18s var(--ease); }
+.btn::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 2px 4px rgba(4, 10, 32, .20), 0 12px 24px rgba(4, 10, 32, .26); opacity: 0; transition: opacity .18s var(--ease); pointer-events: none; }
+.btn svg { flex: none; width: 16px; height: 16px; transition: transform .2s var(--ease); }
+.btn:active { transform: scale(.97); transition-duration: .08s; }
+.btn-gold { background: var(--brand-gold); color: var(--brand-midnight); }
+.btn-white { background: #fff; color: var(--brand-midnight); }
+.btn-blue { background: var(--brand-blue); color: #fff; }
+.btn-ghost { background: rgba(255, 255, 255, .08); color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .55); }
 @media (hover: hover) {
-  .top a.mail:hover, .btn:hover, .open a:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(17,20,24,.16); }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:hover::after { opacity: 1; }
+  .btn:hover .i-right { transform: translateX(4px); }
+  .btn:hover .i-down { transform: translateY(3px); }
 }
-.top a.mail:active, .btn:active, .open a:active { transform: scale(.97); box-shadow: none; transition-duration: .08s; }
-.intro > * { animation: rise .55s var(--ease) both; }
-.intro > :nth-child(2) { animation-delay: .07s; }
-.grid .demo { animation: rise .6s var(--ease) backwards; }
-.grid .demo:nth-child(1) { animation-delay: .14s; } .grid .demo:nth-child(2) { animation-delay: .21s; } .grid .demo:nth-child(3) { animation-delay: .28s; }
-@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
-.demo { position: relative; transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--lift, 0px)); transition: transform .35s var(--ease), border-color .15s, box-shadow .3s var(--ease); }
-.demo.tilting { transition: transform .08s linear, border-color .15s, box-shadow .3s var(--ease); }
-@media (hover: hover) { .demo:hover { --lift: -6px; box-shadow: 0 18px 40px rgba(17,20,24,.12); } }
-.shot { overflow: hidden; position: relative; }
-.shot img { transition: transform .6s var(--ease); }
-@media (hover: hover) { .demo:hover .shot img { transform: scale(1.045); } }
-.shot::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at var(--gx, 50%) var(--gy, 0%), rgba(255,255,255,.28), rgba(255,255,255,0) 55%); opacity: 0; transition: opacity .3s; pointer-events: none; }
-.demo.tilting .shot::after { opacity: 1; }
-.open a::after { content: "\2192"; display: inline-block; transition: transform .2s var(--ease); }
-.open a:hover::after { transform: translateX(4px); }
-.marquee { overflow: hidden; border-top: 1px solid var(--line); padding: 18px 0; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-.mq-track { display: flex; gap: 12px; width: max-content; animation: mq 40s linear infinite; }
-.marquee:hover .mq-track { animation-play-state: paused; }
-.mq-track span { white-space: nowrap; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: 15px; color: var(--ink); background: #fff; }
-@keyframes mq { to { transform: translateX(-50%); } }
-.rv { opacity: 0; translate: 0 16px; }
-.rv.in { opacity: 1; translate: 0 0; transition: opacity .45s var(--ease) var(--d, 0s), translate .45s var(--ease) var(--d, 0s); }
-.list li::before { transition: transform .3s var(--ease) var(--d, 0s); }
-.list li.rv::before { transform: rotate(-45deg) scale(0); }
-.list li.rv.in::before { transform: rotate(-45deg) scale(1); }
-#copy { min-width: 8.5em; justify-content: center; }
-#copy.done { background: var(--ink); color: #fff; }
+
+.top { position: sticky; top: 0; z-index: 20; background: var(--brand-midnight); }
+.top-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+.top .btn { min-height: 44px; padding: 0 20px; font-size: 15px; }
+
+.hero { overflow: hidden; background: linear-gradient(180deg, var(--brand-midnight) 0, rgba(15, 37, 87, 0) 160px), linear-gradient(120deg, var(--brand-deep) 0%, var(--brand-midnight) 35%, var(--brand-blue) 100%); }
+.hero-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); column-gap: 48px; align-items: start; padding-top: 64px; padding-bottom: 48px; }
+h1 { font-size: clamp(3rem, 1.6rem + 5vw, 5.5rem); font-weight: 800; line-height: 1; letter-spacing: -.035em; }
+h1 span { display: block; }
+h1 .by { margin-top: 16px; font-size: clamp(1.25rem, 1rem + .8vw, 1.625rem); font-weight: 700; line-height: 1.2; letter-spacing: -.015em; color: var(--on-brand-soft); }
+.lead { margin-top: 24px; max-width: 30em; font-size: clamp(1.125rem, 1rem + .4vw, 1.25rem); line-height: 1.5; color: var(--on-brand); text-wrap: pretty; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.hero-copy { container-type: inline-size; }
+.trust { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin-top: 32px; font-size: 16px; font-weight: 700; line-height: 1.5; color: var(--on-brand-soft); }
+.trust .sep { color: var(--on-brand-muted); }
+.trust .stars { color: var(--brand-gold); letter-spacing: 2px; font-size: 1.08em; }
+@container (max-width: 475px) {
+  .trust .sep-2 { display: none; }
+  .trust-last { flex-basis: 100%; }
+}
+
+.stack { position: relative; align-self: center; aspect-ratio: 700 / 540; }
+.win { position: absolute; display: block; overflow: hidden; border-radius: 10px; background: #fff; box-shadow: var(--shadow-win); transition: translate .25s var(--ease); }
+.win .bar { display: flex; align-items: center; gap: 5px; height: 24px; padding: 0 10px; background: #EEF2FA; }
+.win .bar i { width: 7px; height: 7px; border-radius: 50%; background: #BCC8E2; }
+.win .bar::after { content: ""; width: 42%; height: 10px; margin-left: 8px; border-radius: 5px; background: #DBE2F1; }
+.win img { width: 100%; }
+.win-b { left: 0; top: 14%; width: 54%; rotate: -3deg; z-index: 1; }
+.win-h { left: 50%; top: 0; width: 50%; rotate: 2.5deg; z-index: 2; }
+.win-g { left: 35%; top: 42%; width: 65%; rotate: -1deg; z-index: 3; }
+@media (hover: hover) { .win:hover { translate: 0 -6px; } }
+
+.demos { padding: 96px 0; }
+.head { max-width: 720px; }
+h2 { color: var(--ink); font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -.03em; text-wrap: balance; }
+.head p { max-width: 640px; margin-top: 16px; color: var(--muted); text-wrap: pretty; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+.demo { position: relative; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); transition: transform .25s var(--ease); }
+.demo::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: var(--shadow-lift); opacity: 0; transition: opacity .25s var(--ease); pointer-events: none; }
+.shot { display: block; flex: none; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 15px 15px 0 0; border-bottom: 1px solid var(--line); background: var(--surface-soft); }
+.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .5s var(--ease); }
+.body { display: flex; flex-direction: column; flex: 1; gap: 8px; padding: 24px; }
+.tag { font-size: 14px; font-weight: 700; color: var(--brand-blue); }
+h3 { color: var(--ink); font-size: 1.375rem; font-weight: 800; line-height: 1.2; letter-spacing: -.02em; }
+.desc { font-size: 16px; color: var(--muted); }
+.open { margin-top: auto; padding-top: 16px; }
+.open .btn { min-height: 48px; padding: 12px 20px; font-size: 15px; text-align: left; }
+@media (hover: hover) {
+  .demo:hover { transform: translateY(-4px); }
+  .demo:hover::after { opacity: 1; }
+  .demo:hover .shot img { transform: scale(1.03); }
+}
+
+.chips { background: var(--brand-midnight); padding: 16px 0; }
+.mq { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.mq-track { display: flex; gap: 12px; width: max-content; animation: mq 48s linear infinite; }
+.mq:hover .mq-track { animation-play-state: paused; }
+.mq-track span { padding: 8px 16px; border: 1px solid rgba(255, 255, 255, .18); border-radius: 12px; background: rgba(255, 255, 255, .10); font-size: 15px; font-weight: 700; white-space: nowrap; color: var(--on-brand); }
+@keyframes mq { to { transform: translateX(calc(-50% - 6px)); } }
+
+.band { background: var(--surface-soft); padding: 96px 0; }
+.band-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 48px; }
+.list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; padding: 0; list-style: none; color: var(--ink); }
+.list li { position: relative; padding-left: 36px; text-wrap: pretty; }
+.list li::before { content: ""; position: absolute; left: 0; top: .1em; width: 24px; height: 24px; border-radius: 50%; background: var(--brand-blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.5l3.2 3.2L17 9' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 24px 24px no-repeat; }
+
+.cta { padding: 96px 0; }
+.cta-panel { position: relative; overflow: hidden; border-radius: 24px; padding: 64px; background: linear-gradient(120deg, var(--brand-deep) 0%, var(--brand-midnight) 35%, var(--brand-blue) 100%); }
+.cta-copy { position: relative; z-index: 1; max-width: 620px; }
+.cta h2 { color: var(--on-brand); font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); }
+.cta p { margin-top: 16px; font-size: 1.125rem; color: var(--on-brand-soft); text-wrap: pretty; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 32px; }
+#copy { min-width: 8.5em; }
+.cta-mark { position: absolute; right: -48px; bottom: -128px; width: 400px; height: 400px; rotate: -8deg; opacity: .1; pointer-events: none; }
+
+.foot { background: var(--brand-midnight); padding: 48px 0 32px; font-size: 15px; color: var(--on-brand-soft); }
+.foot-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px; }
+.foot-list { display: flex; flex-wrap: wrap; align-items: center; gap: 0 32px; padding: 0; list-style: none; font-weight: 600; }
+.foot-list li { display: flex; align-items: center; min-height: 44px; }
+.foot-list a { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: var(--on-brand); text-decoration: none; }
+.foot-list a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 10px; height: 2px; background: var(--brand-gold); transform: scaleX(0); transform-origin: left; transition: transform .2s var(--ease); }
+.foot-list a:hover::after, .foot-list a:focus-visible::after { transform: scaleX(1); }
+.note { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .14); font-size: 14px; color: var(--on-brand-muted); }
+
+@media (min-width: 1280px) {
+  .hero { overflow: visible; }
+  .stack { align-self: end; margin-right: calc(-1 * clamp(0px, (100vw - 1240px) / 2, 72px)); margin-bottom: -96px; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-in { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); column-gap: 32px; padding-bottom: 64px; }
+}
+@media (max-width: 1023px) {
+  .hero-in { grid-template-columns: minmax(0, 1fr); row-gap: 48px; padding-top: 48px; padding-bottom: 64px; }
+  .stack { max-width: 720px; }
+  .demos, .band, .cta { padding: 64px 0; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .grid { gap: 16px; }
+  .demo { flex-direction: row; align-items: center; padding: 16px; }
+  .shot { flex: 0 0 46%; border: 1px solid var(--line); border-radius: 8px; }
+  .body { padding: 8px 8px 8px 24px; }
+  .band-in { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .cta-panel { padding: 48px; }
+  .cta-mark { display: none; }
+}
+@media (max-width: 639px) {
+  .top-in { min-height: 64px; }
+  .brand { gap: 8px; }
+  .brand svg { width: 40px; height: 40px; }
+  .wm { font-size: 22px; }
+  .wm small { font-size: 10.5px; }
+  .top .btn { padding: 0 16px; }
+  .hero-in { padding-top: 32px; padding-bottom: 48px; row-gap: 32px; }
+  .actions .btn { flex: 1 1 auto; }
+  .trust { font-size: 15px; }
+  .stack { aspect-ratio: 358 / 372; }
+  .win { border-radius: 8px; }
+  .win .bar { height: 18px; gap: 4px; padding: 0 8px; }
+  .win .bar i { width: 5px; height: 5px; }
+  .win .bar::after { height: 8px; }
+  .win-b { left: 0; top: 0; width: 60%; }
+  .win-h { left: 41%; top: 9%; width: 57%; }
+  .win-g { left: 10%; top: 39%; width: 90%; }
+  .demos, .band, .cta { padding: 48px 0; }
+  .grid { margin-top: 32px; }
+  .demo { flex-direction: column; align-items: stretch; padding: 0; }
+  .shot { flex: none; border: 0; border-bottom: 1px solid var(--line); border-radius: 15px 15px 0 0; }
+  .body { padding: 20px; }
+  .open .btn { display: flex; justify-content: space-between; }
+  .list { grid-template-columns: 1fr; gap: 16px; }
+  .cta-panel { border-radius: 16px; padding: 32px 20px; }
+  .row .btn { flex: 1 1 auto; padding: 0 16px; font-size: 15px; }
+  .foot { padding-top: 32px; }
+  .foot-in { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .foot-list { flex-direction: column; align-items: flex-start; }
+  .note { margin-top: 24px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .rv { opacity: 1 !important; translate: none !important; }
-  .demo { transform: none !important; }
-  .mq-track { flex-wrap: wrap; width: auto; }
+  .mq { -webkit-mask-image: none; mask-image: none; }
+  .mq-track { flex-wrap: wrap; justify-content: center; width: auto; padding: 0 var(--gutter); }
+  .mq-track span:nth-child(n+12) { display: none; }
 }
 </style>
 </head>
 <body>
-<header class="top">
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="omc-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D4ED8"/><stop offset="1" stop-color="#2F64F0"/></linearGradient>
+    <symbol id="omc-mark" viewBox="0 0 240 240">
+      <rect x="4" y="4" width="232" height="232" rx="56" fill="url(#omc-g)" stroke="#fff" stroke-opacity=".35" stroke-width="4"/>
+      <path d="M94.53 172V79.9H72.78V60.25H117.78V172Z" fill="#fff"/>
+      <rect x="146" y="66" width="19" height="62" rx="4" fill="#F6C744"/>
+      <rect x="132" y="81" width="47" height="17" rx="4" fill="#F6C744"/>
+    </symbol>
+    <symbol id="omc-ghost" viewBox="0 0 240 240">
+      <rect x="4" y="4" width="232" height="232" rx="56" fill="#fff" fill-opacity=".5"/>
+      <path d="M94.53 172V79.9H72.78V60.25H117.78V172Z" fill="#fff"/>
+      <rect x="146" y="66" width="19" height="62" rx="4" fill="#fff"/>
+      <rect x="132" y="81" width="47" height="17" rx="4" fill="#fff"/>
+    </symbol>
+    <symbol id="i-right" viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 2.5v11M3.5 9 8 13.5 12.5 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="top on-brand">
   <div class="wrap top-in">
-    <a class="name" href="./">One More Company · Church websites</a>
-    <a class="mail" href="mailto:hello@onemorecompany.net">Email us</a>
+    <a class="brand" href="./" aria-label="One More Company">
+      <svg viewBox="0 0 240 240" aria-hidden="true"><use href="#omc-mark"/></svg>
+      <span class="wm">One More<small>COMPANY</small></span>
+    </a>
+    <a class="btn btn-white" href="mailto:hello@onemorecompany.net">Email us</a>
   </div>
 </header>
 
 <main>
-  <section class="wrap intro">
-    <h1>Church websites by One More Company</h1>
-    <p>Three finished demo sites you can click through on your phone or computer. Each one puts service times and your address on the first screen and includes a Plan a Visit form, sermons with a live stream countdown, events, prayer requests and Tithely giving. The churches are fictional. Your site gets your own name, photos and words.</p>
+  <section class="hero on-brand">
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <h1><span>Church</span> <span>websites</span> <span class="by">by One More Company</span></h1>
+        <p class="lead">Three finished demo sites you can click through on your phone or computer.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#demos">See the three demos <svg class="i-down" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-down"/></svg></a>
+          <a class="btn btn-ghost" href="mailto:hello@onemorecompany.net">Email us</a>
+        </div>
+        <p class="trust"><span>Orlando, FL</span> <span class="sep" aria-hidden="true">·</span> <span class="stars" role="img" aria-label="5 stars">★★★★★</span> <span class="sep sep-2" aria-hidden="true">·</span> <span class="trust-last">100% Job Success on Upwork</span></p>
+      </div>
+      <div class="stack">
+        <a class="win win-b" href="bold/"><span class="bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="previews/bold.jpg" width="960" height="600" alt="Northlight Church demo site, the bold and modern design" decoding="async"></a>
+        <a class="win win-h" href="heritage/"><span class="bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="previews/heritage.jpg" width="960" height="600" alt="St. Andrew's Fellowship demo site, the traditional and reverent design" decoding="async"></a>
+        <a class="win win-g" href="grace/"><span class="bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="previews/grace.jpg" width="960" height="600" alt="Grace Harbor Church demo site, the warm and welcoming design" fetchpriority="high" decoding="async"></a>
+      </div>
+    </div>
   </section>
 
-  <section class="wrap grid" aria-label="Demo sites">
-    <article class="demo">
-      <a class="shot" href="grace/" tabindex="-1" aria-hidden="true"><img src="previews/grace.jpg" width="960" height="600" alt="" loading="lazy"></a>
-      <div class="body">
-        <p class="tag">Warm and welcoming</p>
-        <h2>Grace Harbor Church</h2>
-        <p class="desc">For small and medium churches. Big photos of your people, a simple newcomer form, and giving in one tap.</p>
-        <p class="open"><a href="grace/">Open the Grace Harbor demo</a></p>
+  <section class="demos" aria-labelledby="demos">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="demos">Three designs you can click through</h2>
+        <p>Each one puts service times and your address on the first screen and includes a Plan a Visit form, sermons with a live stream countdown, events, prayer requests and Tithely giving. The churches are fictional. Your site gets your own name, photos and words.</p>
       </div>
-    </article>
-    <article class="demo">
-      <a class="shot" href="bold/" tabindex="-1" aria-hidden="true"><img src="previews/bold.jpg" width="960" height="600" alt="" loading="lazy"></a>
-      <div class="body">
-        <p class="tag">Bold and modern</p>
-        <h2>Northlight Church</h2>
-        <p class="desc">For growing and multi-campus churches. Worship video, a campus switcher and a live countdown.</p>
-        <p class="open"><a href="bold/">Open the Northlight demo</a></p>
+      <div class="grid">
+        <article class="demo">
+          <a class="shot" href="grace/" tabindex="-1" aria-hidden="true"><img src="previews/grace.jpg" width="960" height="600" alt="" loading="lazy" decoding="async"></a>
+          <div class="body">
+            <p class="tag">Warm and welcoming</p>
+            <h3>Grace Harbor Church</h3>
+            <p class="desc">For small and medium churches. Big photos of your people, a simple newcomer form, and giving in one tap.</p>
+            <p class="open"><a class="btn btn-blue" href="grace/">Open the Grace Harbor demo <svg class="i-right" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-right"/></svg></a></p>
+          </div>
+        </article>
+        <article class="demo">
+          <a class="shot" href="bold/" tabindex="-1" aria-hidden="true"><img src="previews/bold.jpg" width="960" height="600" alt="" loading="lazy" decoding="async"></a>
+          <div class="body">
+            <p class="tag">Bold and modern</p>
+            <h3>Northlight Church</h3>
+            <p class="desc">For growing and multi-campus churches. Worship video, a campus switcher and a live countdown.</p>
+            <p class="open"><a class="btn btn-blue" href="bold/">Open the Northlight demo <svg class="i-right" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-right"/></svg></a></p>
+          </div>
+        </article>
+        <article class="demo">
+          <a class="shot" href="heritage/" tabindex="-1" aria-hidden="true"><img src="previews/heritage.jpg" width="960" height="600" alt="" loading="lazy" decoding="async"></a>
+          <div class="body">
+            <p class="tag">Traditional and reverent</p>
+            <h3>St. Andrew's Fellowship</h3>
+            <p class="desc">For established congregations. Order of worship, a history timeline and a large text option.</p>
+            <p class="open"><a class="btn btn-blue" href="heritage/">Open the St. Andrew's demo <svg class="i-right" viewBox="0 0 16 16" aria-hidden="true"><use href="#i-right"/></svg></a></p>
+          </div>
+        </article>
       </div>
-    </article>
-    <article class="demo">
-      <a class="shot" href="heritage/" tabindex="-1" aria-hidden="true"><img src="previews/heritage.jpg" width="960" height="600" alt="" loading="lazy"></a>
-      <div class="body">
-        <p class="tag">Traditional and reverent</p>
-        <h2>St. Andrew's Fellowship</h2>
-        <p class="desc">For established congregations. Order of worship, a history timeline and a large text option.</p>
-        <p class="open"><a href="heritage/">Open the St. Andrew's demo</a></p>
-      </div>
-    </article>
+    </div>
   </section>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="mq-track">
-      <span>Plan a Visit form</span><span>Service times on the first screen</span><span>Tithely giving</span><span>Sermon player</span><span>Live stream countdown</span><span>Events</span><span>Kids check-in info</span><span>Prayer requests</span><span>Staff and beliefs</span><span>Map and directions</span><span>Fast on phones</span>
-      <span>Plan a Visit form</span><span>Service times on the first screen</span><span>Tithely giving</span><span>Sermon player</span><span>Live stream countdown</span><span>Events</span><span>Kids check-in info</span><span>Prayer requests</span><span>Staff and beliefs</span><span>Map and directions</span><span>Fast on phones</span>
+  <div class="chips on-brand" aria-hidden="true">
+    <div class="mq">
+      <div class="mq-track">
+        <span>Plan a Visit form</span><span>Service times on the first screen</span><span>Tithely giving</span><span>Sermon player</span><span>Live stream countdown</span><span>Events</span><span>Kids check-in info</span><span>Prayer requests</span><span>Staff and beliefs</span><span>Map and directions</span><span>Fast on phones</span>
+        <span>Plan a Visit form</span><span>Service times on the first screen</span><span>Tithely giving</span><span>Sermon player</span><span>Live stream countdown</span><span>Events</span><span>Kids check-in info</span><span>Prayer requests</span><span>Staff and beliefs</span><span>Map and directions</span><span>Fast on phones</span>
+      </div>
     </div>
   </div>
 
@@ -176,64 +346,44 @@ header.top.scrolled { box-shadow: 0 6px 20px rgba(17,20,24,.07); }
     </div>
   </section>
 
-  <section class="wrap contact" aria-labelledby="contact-title">
-    <h2 id="contact-title">Want one for your church?</h2>
-    <p>Send your church name and current website (if you have one). We will reply with which design fits and what we need from you.</p>
-    <div class="row">
-      <a class="btn btn-dark" href="mailto:hello@onemorecompany.net">hello@onemorecompany.net</a>
-      <button class="btn btn-line" type="button" id="copy">Copy email</button>
+  <section class="cta" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="cta-panel on-brand">
+        <svg class="cta-mark" viewBox="0 0 240 240" aria-hidden="true"><use href="#omc-ghost"/></svg>
+        <div class="cta-copy">
+          <h2 id="contact-title">Want one for your church?</h2>
+          <p>Send your church name and current website (if you have one). We will reply with which design fits and what we need from you.</p>
+          <div class="row">
+            <a class="btn btn-gold" href="mailto:hello@onemorecompany.net">hello@onemorecompany.net</a>
+            <button class="btn btn-ghost" type="button" id="copy">Copy email</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">Demo churches, names and addresses are fictional. Photos are free-license from Unsplash.</div>
+<footer class="foot on-brand">
+  <div class="wrap">
+    <div class="foot-in">
+      <div class="brand">
+        <svg viewBox="0 0 240 240" aria-hidden="true"><use href="#omc-mark"/></svg>
+        <span class="wm">One More<small>COMPANY</small></span>
+      </div>
+      <ul class="foot-list">
+        <li><a href="mailto:hello@onemorecompany.net">hello@onemorecompany.net</a></li>
+        <li>Orlando, FL</li>
+        <li>&copy; 2026 One More Company</li>
+      </ul>
+    </div>
+    <p class="note">Demo churches, names and addresses are fictional. Photos are free-license from Unsplash.</p>
+  </div>
 </footer>
 <script>
 (function () {
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, hasIO = 'IntersectionObserver' in window;
-  /* sticky header gains a shadow once the page scrolls (sentinel, no scroll handler) */
-  var top = document.querySelector('header.top'), intro = document.querySelector('.intro');
-  if (hasIO) new IntersectionObserver(function (e) { top.classList.toggle('scrolled', !e[0].isIntersecting); }, { rootMargin: '-65px 0px 0px 0px', threshold: 0.99 }).observe(intro.querySelector('h1'));
-  /* reveal the includes list once, with a stagger; nothing is hidden without JS */
-  if (hasIO && !reduce) {
-    var els = [].slice.call(document.querySelectorAll('.band h2, .list li, .contact > *')), tops = els.map(function (el) { return el.getBoundingClientRect().top; }), vh = innerHeight;
-    var io = new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); e.target.classList.add('in'); } }); }, { rootMargin: '0px 0px -8% 0px' });
-    els.forEach(function (el, i) {
-      if (tops[i] < vh) return;
-      var k = el.parentElement.classList.contains('list') ? [].indexOf.call(el.parentElement.children, el) : 0;
-      el.style.setProperty('--d', Math.min(k * 0.05, 0.35) + 's');
-      el.classList.add('rv'); io.observe(el);
-    });
-    setTimeout(function () { els.forEach(function (el) { el.classList.add('in'); }); }, 4000);
-  }
-  /* cards tilt toward the pointer (mouse only, one rAF per move) */
-  if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    [].forEach.call(document.querySelectorAll('.demo'), function (card) {
-      var raf = 0, x = 0, y = 0, box = null;
-      card.addEventListener('pointerenter', function () { box = card.getBoundingClientRect(); card.classList.add('tilting'); });
-      card.addEventListener('pointermove', function (e) {
-        x = e.clientX; y = e.clientY;
-        if (raf) return;
-        raf = requestAnimationFrame(function () {
-          raf = 0; if (!box) return;
-          var px = (x - box.left) / box.width, py = (y - box.top) / box.height;
-          card.style.setProperty('--ry', ((px - 0.5) * 6).toFixed(2) + 'deg');
-          card.style.setProperty('--rx', ((0.5 - py) * 5).toFixed(2) + 'deg');
-          card.style.setProperty('--gx', (px * 100).toFixed(0) + '%');
-          card.style.setProperty('--gy', (py * 100).toFixed(0) + '%');
-        });
-      }, { passive: true });
-      card.addEventListener('pointerleave', function () {
-        box = null; card.classList.remove('tilting');
-        card.style.setProperty('--rx', '0deg'); card.style.setProperty('--ry', '0deg');
-      });
-    });
-  }
-  /* copy email with feedback; width is fixed so the row never shifts */
   var b = document.getElementById('copy');
   b.addEventListener('click', function () {
-    var done = function (t) { b.textContent = t; b.classList.add('done'); setTimeout(function () { b.textContent = 'Copy email'; b.classList.remove('done'); }, 1600); };
+    var done = function (t) { b.textContent = t; setTimeout(function () { b.textContent = 'Copy email'; }, 1600); };
     if (navigator.clipboard) navigator.clipboard.writeText('hello@onemorecompany.net').then(function () { done('Copied'); }, function () { done('Select the address'); });
     else done('Select the address');
   });
