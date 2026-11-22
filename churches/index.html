@@ -116,7 +116,7 @@ h1 .by { margin-top: 16px; font-size: clamp(1.25rem, 1rem + .8vw, 1.625rem); fon
 .win-h { left: 50%; top: 0; width: 50%; rotate: 2.5deg; z-index: 2; }
 .win-g { left: 35%; top: 42%; width: 65%; rotate: -1deg; z-index: 3; }
 @media (hover: hover) { .win:hover { translate: 0 -6px; } }
-.seal { position: absolute; z-index: 4; left: 1%; bottom: 3%; width: 31%; rotate: -12deg; pointer-events: none; filter: drop-shadow(0 2px 3px rgba(4, 10, 32, .34)) drop-shadow(0 14px 22px rgba(4, 10, 32, .34)); }
+.seal { position: absolute; z-index: 4; left: 30%; bottom: -21%; width: 28%; rotate: -12deg; pointer-events: none; filter: drop-shadow(0 2px 3px rgba(4, 10, 32, .34)) drop-shadow(0 14px 22px rgba(4, 10, 32, .34)); }
 .seal svg { width: 100%; height: auto; overflow: visible; }
 .seal text { font-family: var(--font); font-weight: 800; }
 @keyframes seal-in { from { opacity: 0; scale: 1.5; rotate: -26deg; } }
@@ -179,11 +179,11 @@ h3 { color: var(--ink); font-size: 1.375rem; font-weight: 800; line-height: 1.2;
 }
 @media (min-width: 1024px) and (max-width: 1279px) {
   .hero-in { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); column-gap: 32px; padding-bottom: 64px; }
+  .stack { margin-bottom: 72px; }
 }
 @media (max-width: 1023px) {
   .hero-in { grid-template-columns: minmax(0, 1fr); row-gap: 48px; padding-top: 48px; padding-bottom: 64px; }
-  .stack { max-width: 720px; }
-  .seal { left: 4%; }
+  .stack { max-width: 720px; margin-bottom: 72px; }
   .demos, .band, .cta { padding: 64px 0; }
   .grid { grid-template-columns: minmax(0, 1fr); }
   .grid { gap: 16px; }
